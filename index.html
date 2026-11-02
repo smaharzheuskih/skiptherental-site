@@ -103,6 +103,12 @@ button,input,select{font:inherit; color:inherit}
 .top nav{display:flex; gap:2px}
 .top nav a{padding:10px 14px; border-radius:999px; font:600 15px/1 var(--ui); text-decoration:none}
 .top nav a:hover{background:var(--soft)}
+/* app and sign-up buttons (appButtons here and in scripts/site-parts.mjs) */
+.apps{display:flex; flex-wrap:wrap; gap:6px}
+.apps a{display:inline-flex; align-items:center; min-height:32px; padding:4px 12px; border-radius:999px; background:var(--surface); border:1px solid var(--line); color:var(--ink); font:600 13.5px/1.2 var(--ui); text-decoration:none; white-space:nowrap}
+.apps a:hover{border-color:var(--go)}
+.li .apps,.op .apps,.hw .apps{display:flex; grid-column:1 / -1; margin-top:8px}
+.opc .apps{margin-top:auto; padding-top:4px}
 
 /* ------------------------------------------------------------------ hero */
 /* The hero is the booking block with the illustration as its background.
@@ -511,7 +517,7 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
   <nav class="foot-cty" aria-label="Car sharing guides by country"><b class="foot-hd">Car sharing guides</b><a href="austria.html">Austria</a> · <a href="belgium.html">Belgium</a> · <a href="bulgaria.html">Bulgaria</a> · <a href="croatia.html">Croatia</a> · <a href="cyprus.html">Cyprus</a> · <a href="czechia.html">Czechia</a> · <a href="denmark.html">Denmark</a> · <a href="estonia.html">Estonia</a> · <a href="finland.html">Finland</a> · <a href="france.html">France</a> · <a href="germany.html">Germany</a> · <a href="greece.html">Greece</a> · <a href="hungary.html">Hungary</a> · <a href="iceland.html">Iceland</a> · <a href="ireland.html">Ireland</a> · <a href="italy.html">Italy</a> · <a href="latvia.html">Latvia</a> · <a href="liechtenstein.html">Liechtenstein</a> · <a href="lithuania.html">Lithuania</a> · <a href="luxembourg.html">Luxembourg</a> · <a href="moldova.html">Moldova</a> · <a href="netherlands.html">Netherlands</a> · <a href="north-macedonia.html">North Macedonia</a> · <a href="norway.html">Norway</a> · <a href="poland.html">Poland</a> · <a href="portugal.html">Portugal</a> · <a href="serbia.html">Serbia</a> · <a href="slovakia.html">Slovakia</a> · <a href="slovenia.html">Slovenia</a> · <a href="spain.html">Spain</a> · <a href="sweden.html">Sweden</a> · <a href="switzerland.html">Switzerland</a> · <a href="ukraine.html">Ukraine</a> · <a href="united-kingdom.html">United Kingdom</a></nav>
   <nav class="foot-cty" aria-label="Answers"><b class="foot-hd">Answers</b><a href="car-sharing-vs-rental-car.html">Car sharing vs a rental car</a> · <a href="vilnius-bolt-drive-citybee-spark.html">Bolt Drive vs CityBee vs Spark</a> · <a href="vilnius-riga-tallinn-one-way.html">Vilnius → Riga → Tallinn one way</a> · <a href="vilnius-airport-car-sharing.html">Vilnius Airport</a> · <a href="car-sharing-tourists-driving-licence.html">Licence rules for visitors</a> · <a href="rent-a-car-without-credit-card.html">Without a credit card</a></nav>
   <span><a href="https://www.instagram.com/skiptherental/" rel="me noopener" target="_blank">Instagram</a> · <a href="https://www.tiktok.com/@skiptherental" rel="me noopener" target="_blank">TikTok</a> · <a href="https://www.youtube.com/@SkiptheRental" rel="me noopener" target="_blank">YouTube</a> · <a href="https://www.facebook.com/profile.php?id=61595945318708" rel="me noopener" target="_blank">Facebook</a> · <a href="https://www.threads.com/@skiptherental" rel="me noopener" target="_blank">Threads</a></span>
-  <span><a href="about.html">About</a> · <a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · no cookies, no tracking</span>
+  <span><a href="about.html">About</a> · <a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · cookies only if you agree · <a href="#" class="js-consent">Cookie settings</a></span>
 </footer>
 
 <div class="scrim" id="scrim"></div>
@@ -520,7 +526,7 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
   <div class="db" id="drawerBody"></div>
 </aside>
 
-<script src="db.js?v=e640f8e493"></script>
+<script src="db.js?v=31adf99d83"></script>
 <script>
 (function(){
 "use strict";
@@ -1674,7 +1680,7 @@ function renderAnswer(res, chosen){
       + (others.length ? res.carsharing : []).map(function(q, i){
           return '<div class="li pick' + (q === best ? ' on' : '') + '" role="button" tabindex="0" data-op="' + esc(q.operator) + '"><b>' + esc(q.name)
             + (i === 0 ? '<i class="tag">cheapest</i>' : '') + '</b><span class="p tab">' + eur(q.total) + '</span><span>' + esc(q.plan) + (q === best ? ' · shown above' : ' · tap to compare') + '</span></div>'; }).join("")
-      + apps.map(function(q){ return '<div class="li"><b>' + esc(q.name) + '</b><span class="p">in app</span><span>' + esc(short(q.facts, 110)) + '</span></div>'; }).join("")
+      + apps.map(function(q){ return '<div class="li"><b>' + esc(q.name) + '</b><span class="p">in app</span><span>' + esc(short(q.facts, 110)) + '</span>' + appButtons(opById(q.operator)) + '</div>'; }).join("")
       + out.map(function(x){ return '<div class="li out"><b>' + esc(x.name) + '</b><span class="p">—</span><span>' + esc(x.reasons[0].text) + '</span></div>'; }).join("")
       + '</div></details>';
   }
@@ -1724,9 +1730,18 @@ function renderAnswer(res, chosen){
 }
 
 /* ====================================================== step 3: how to do it */
-function appLink(op, label){
-  var src = (op.sources || [])[0] || "", m = /^https?:\/\/[^\/\s]+/.exec(src);
-  return m ? '<a href="' + m[0] + '" target="_blank" rel="noopener">' + esc(short(label, 50)) + '</a>' : esc(short(label, 50));
+// Store and sign-up links from the operator's own site (op.appLinks), straight
+// to the store. A click is counted by the beacon in scripts/site-parts.mjs.
+var STORE = { ios: "App Store", android: "Google Play", web: "Sign up on their site" };
+function appButtons(op){
+  var l = op && op.appLinks;
+  if(!l) return "";
+  // Both stores; the sign-up page only where a store link is missing.
+  var keys = l.ios && l.android ? ["ios", "android"] : ["ios", "android", "web"];
+  var a = keys.filter(function(k){ return l[k]; }).map(function(k){
+    return '<a href="' + esc(l[k]) + '" data-app="' + esc(op.id + "/" + k) + '" target="_blank" rel="nofollow noopener">' + STORE[k] + '</a>';
+  });
+  return a.length ? '<span class="apps">' + a.join("") + '</span>' : "";
 }
 function card(icon, title, text){ return '<div class="hw">' + ICON[icon] + '<b>' + title + '</b><span>' + text + '</span></div>'; }
 function renderHow(res, chosen){
@@ -1736,7 +1751,7 @@ function renderHow(res, chosen){
     var op = opById(best.operator), reg = op.registration || {};
     $("howLine").textContent = "With " + best.name + " it takes four steps, most of them from home.";
     $("how").innerHTML =
-      card("phone", "Get the app", appLink(op, reg.app || best.name + " app") + " on the App Store or Google Play.")
+      card("phone", "Get the app", esc(short(reg.app || best.name + " app", 50)) + (appButtons(op) || " on the App Store or Google Play."))
       + card("id", "Sign up at home", "Driving licence and a bank card. " + (reg.time ? "Approval: " + esc(short(reg.time, 80)) + "." : "Approval usually takes minutes."))
       + card("ticket", "Pick the price", esc(best.plan) + ": " + eur(best.total) + " in total.")
       + card("drive", "Drive and park", t.endCountry && t.endCountry !== t.startCountry
@@ -1745,7 +1760,7 @@ function renderHow(res, chosen){
   } else if(!best && res.inApp.length){
     var a = res.inApp[0];
     $("howLine").textContent = "Check " + a.name + " in its app first.";
-    $("how").innerHTML = card("phone", "Get the app", esc(a.name) + " app.") + card("id", "Sign up at home", "Driving licence and a bank card.")
+    $("how").innerHTML = card("phone", "Get the app", esc(a.name) + " app." + appButtons(opById(a.operator))) + card("id", "Sign up at home", "Driving licence and a bank card.")
       + card("ticket", "Compare", "Price your dates in the app against " + eur(res.rental.high.total) + ".")
       + card("creditcard", "Or rent", "If the app costs more, rent a car with a credit card and excess insurance bought online.");
   } else {
@@ -1776,7 +1791,7 @@ function openCountry(cc){
       : o.coverage === "mapped" ? "prices in the app"
       : o.coverage === "manual" ? (o.model === "p2p" ? "typical private car on its site, " : "checked in the app, ") + (o.manualCheck || "")
       : "official price list";
-    return '<div class="op"><b>' + esc(o.name) + '</b><span>' + esc(fit) + ' · ' + price + '</span></div>';
+    return '<div class="op"><b>' + esc(o.name) + '</b><span>' + esc(fit) + ' · ' + price + '</span>' + (lic.residentOnly ? "" : appButtons(o)) + '</div>';
   }).join("") + '</div>';
   if(notes.traps) h += '<div><h4>Good to know</h4><p>' + esc(short(notes.traps, 260)) + '.</p></div>';
   if(cities.length) h += '<div><button class="btn btn-ink btn-sm" id="drawerGo">Check a trip from ' + esc(DB.cities[cities[0]].name) + '</button></div>';
@@ -1866,6 +1881,67 @@ recompute();
   else setTimeout(play, 1000);
 })();
 $("goBtn").addEventListener("click", function(e){ e.preventDefault(); scrollToEl($("answer-step")); });
+})();
+</script>
+<script>
+(function(){
+  function hit(e){
+    var a = e.target.closest ? e.target.closest("a[data-app]") : null;
+    if (a && navigator.sendBeacon) try { navigator.sendBeacon("https://go.skiptherental.com/c/" + a.getAttribute("data-app")); } catch(x){}
+  }
+  document.addEventListener("click", hit);
+  document.addEventListener("auxclick", hit);
+})();
+</script>
+<style>
+.consent{position:fixed; z-index:90; left:12px; right:12px; bottom:max(12px, env(safe-area-inset-bottom, 0px)); max-width:560px; margin:0 auto; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); padding:16px 18px; display:flex; flex-direction:column; gap:12px; font:15px/1.45 var(--ui)}
+.consent[hidden]{display:none}
+.consent p{margin:0} .consent a{color:var(--go-text)}
+.consent .row{display:flex; gap:8px; flex-wrap:wrap}
+.consent button{flex:1 1 140px; min-height:44px; border-radius:999px; border:1.5px solid var(--ink); background:transparent; color:var(--ink); font:700 15px var(--ui); cursor:pointer}
+</style>
+<div class="consent" id="consent" role="dialog" aria-label="Cookies" hidden>
+<p>May I count visits with Google Analytics? It sets cookies and tells Google which pages you read. <a href="privacy.html">Privacy</a></p>
+<div class="row"><button type="button" class="no">No thanks</button><button type="button" class="yes">Yes, that's fine</button></div>
+</div>
+<script>
+(function(){
+  var ID = "G-FW2SQPDWWK", KEY = "str-consent", box = document.getElementById("consent");
+  function get(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } }
+  function put(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
+  function load(){
+    if (window.gtag) return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+    var s = document.createElement("script"); s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID; document.head.appendChild(s);
+  }
+  // Saying no after a yes removes Google's cookies and reloads without it.
+  function forget(){
+    window["ga-disable-" + ID] = true;   // stops it writing them back as the page unloads
+    document.cookie.split(";").forEach(function(c){
+      var n = c.split("=")[0].trim();
+      if (/^_ga/.test(n)) ["", "; domain=." + location.hostname.replace(/^www\./, "")].forEach(function(d){
+        document.cookie = n + "=; Max-Age=0; path=/" + d; });
+    });
+  }
+  function choose(v){
+    var was = get(); put(v); box.hidden = true;
+    if (v === "yes") load(); else if (was === "yes") { forget(); location.reload(); }
+  }
+  box.querySelector(".yes").addEventListener("click", function(){ choose("yes"); });
+  box.querySelector(".no").addEventListener("click", function(){ choose("no"); });
+  document.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest("a") : null;
+    if (!a) return;
+    if (a.classList.contains("js-consent")) { e.preventDefault(); box.hidden = false; return; }
+    var app = a.getAttribute("data-app");
+    if (app && window.gtag) gtag("event", "app_click", { link: app, transport_type: "beacon" });
+  });
+  var c = get();
+  if (c === "yes") load(); else if (c !== "no") box.hidden = false;
 })();
 </script>
 </body>

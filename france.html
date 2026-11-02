@@ -103,6 +103,12 @@ button,input,select{font:inherit; color:inherit}
 .top nav{display:flex; gap:2px}
 .top nav a{padding:10px 14px; border-radius:999px; font:600 15px/1 var(--ui); text-decoration:none}
 .top nav a:hover{background:var(--soft)}
+/* app and sign-up buttons (appButtons here and in scripts/site-parts.mjs) */
+.apps{display:flex; flex-wrap:wrap; gap:6px}
+.apps a{display:inline-flex; align-items:center; min-height:32px; padding:4px 12px; border-radius:999px; background:var(--surface); border:1px solid var(--line); color:var(--ink); font:600 13.5px/1.2 var(--ui); text-decoration:none; white-space:nowrap}
+.apps a:hover{border-color:var(--go)}
+.li .apps,.op .apps,.hw .apps{display:flex; grid-column:1 / -1; margin-top:8px}
+.opc .apps{margin-top:auto; padding-top:4px}
 
 
 footer .foot-cty{max-width:86ch; font-size:13.5px; line-height:1.95; opacity:.86}
@@ -233,6 +239,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Deposit</span><b>Free2move 'may require pre-authorisation for a security deposit, calculated according…</b></div>
   </div>
   <ul class="notes facts"><li>About 600 electric cars, free-floating across almost all of Paris.</li><li>Hourly and daily rates don't include kilometres: every km is billed (e-208: €0.28/km by the hour, €0.19/km by the day). Charging is included.</li><li>Each trip has a €0.99 unlock fee; signing up costs €9 once.</li><li>Excess up to €1,850 in the terms (the booking pages say €1,000).</li></ul>
+  <span class="apps"><a href="https://apps.apple.com/app/id514921710" data-app="free2move-fr/ios" target="_blank" rel="nofollow noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.car2go" data-app="free2move-fr/android" target="_blank" rel="nofollow noopener">Google Play</a></span>
 </article><article class="opc">
   <header><h3>Communauto Paris</h3><span class="cars">Cars and electric cars from fixed stations</span></header>
   <p class="best">Best for: Round trips from a station in Paris</p>
@@ -246,6 +253,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Deposit</span><b>Liberte: none</b></div>
   </div>
   <ul class="notes facts"><li>Visitors can join with a licence and passport; a licence not in French or English needs a translation or an IDP.</li><li>The car goes back to its station. A late return costs €20 (up to 30 min) or €40.</li></ul>
+  <span class="apps"><a href="https://apps.apple.com/app/id1010884219" data-app="communauto-paris/ios" target="_blank" rel="nofollow noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.communauto.reservauto" data-app="communauto-paris/android" target="_blank" rel="nofollow noopener">Google Play</a></span>
 </article><article class="opc">
   <header><h3>Getaround</h3><span class="cars">Private owners' cars, city cars to vans</span></header>
   <p class="best">Best for: A day or a weekend in a private car</p>
@@ -259,6 +267,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Deposit</span><b>A card hold</b></div>
   </div>
   <ul class="notes facts"><li>Non-EU licence and under 90 days in France: bring the original licence and the passport page with your entry stamp.</li><li>Young-driver fee on French cars: €35 (age 18–23), €25 (24–25).</li></ul>
+  <span class="apps"><a href="https://apps.apple.com/app/id492238016" data-app="getaround-fr/ios" target="_blank" rel="nofollow noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.c4mprod.voiturelib" data-app="getaround-fr/android" target="_blank" rel="nofollow noopener">Google Play</a></span>
 </article><article class="opc">
   <header><h3>Turo France</h3><span class="cars">Private owners' cars, from Paris to Nice</span></header>
   <p class="best">Best for: Marseille, Nice and other cities beyond Paris</p>
@@ -272,6 +281,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Deposit</span><b>No fixed deposit published</b></div>
   </div>
   <ul class="notes facts"><li>Accepted: a French or EEA licence, a UK licence issued before 2021, or your home licence (2+ years) with an International Driving Permit.</li><li>Young-driver fee under 26: €10 a day, at least €35–45 per trip.</li><li>Basic cover leaves you up to €3,000 to pay for damage; paid plans cut it to €250 or €0.</li></ul>
+  <span class="apps"><a href="https://apps.apple.com/app/id555063314" data-app="turo-fr/ios" target="_blank" rel="nofollow noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.relayrides.android.relayrides" data-app="turo-fr/android" target="_blank" rel="nofollow noopener">Google Play</a></span>
 </article><article class="opc">
   <header><h3>Leo&amp;Go</h3><span class="cars">Mostly hybrids (Toyota); vans</span></header>
   <p class="best">Best for: Lyon and Lyon Saint-Exupéry airport</p>
@@ -285,6 +295,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Deposit</span><b>T&amp;C allow a deposit pre-authorisation on the card before a rental</b></div>
   </div>
   <ul class="notes facts"><li>EU/EEA licences only. The terms also accept Swiss and UK licences, the FAQ doesn't — ask Leo&amp;Go first.</li><li>Fuel and parking in the Leo&amp;Go zones are included; ending up to 10 km outside the zone costs €50.</li></ul>
+  <span class="apps"><a href="https://apps.apple.com/app/id1573751084" data-app="leoandgo-lyon/ios" target="_blank" rel="nofollow noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.vulog.leo.and.go" data-app="leoandgo-lyon/android" target="_blank" rel="nofollow noopener">Google Play</a></span>
 </article><article class="opc">
   <header><h3>Citiz</h3><span class="cars">Cars, vans and electric cars from fixed stations</span></header>
   <p class="best">Best for: Round trips in Lyon, Marseille and other regional cities</p>
@@ -298,6 +309,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Deposit</span><b>None when paying per trip by card</b></div>
   </div>
   <ul class="notes facts"><li>The car goes back to its own spot; fuel and insurance are included.</li><li>You may drive to the countries next to France; further needs Citiz's permission.</li><li>Sign-up asks for proof of address and a bank account statement.</li><li>Each region runs its own cooperative with its own prices.</li></ul>
+  <span class="apps"><a href="https://apps.apple.com/app/id6443824961" data-app="citiz-fr/ios" target="_blank" rel="nofollow noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.franceautopartage.softiz" data-app="citiz-fr/android" target="_blank" rel="nofollow noopener">Google Play</a></span>
 </article></div></section>
 <section class="sec" id="signup"><h2>Can a visitor sign up?</h2><div class="tblw"><table class="tbl"><thead><tr><th>Service</th><th>Your licence</th><th>Age</th><th>Sign-up</th></tr></thead><tbody><tr><td><b>Free2move</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>18+</td><td>Licence photos</td></tr><tr><td><b>Communauto Paris</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>18+</td><td>Online application</td></tr><tr><td><b>Getaround</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>18+ · 2 yr licence</td><td>Licence validated by Getaround before rental</td></tr><tr><td><b>Turo France</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>17+ · 2 yr licence</td><td>Age and driving history checked at booking</td></tr><tr><td><b>Leo&amp;Go</b></td><td>EU/EEA licences only</td><td>21+ · 2 yr licence</td><td>Licence validated in app before first rental</td></tr><tr><td><b>Citiz</b></td><td>Not limited to EU licences; check the terms for yours</td><td>18+</td><td>Online sign-up with documents</td></tr></tbody></table></div><p class="revnote">From each operator's terms. The app has the final word. <a href="car-sharing-tourists-driving-licence.html">Licence rules in every country</a>.</p></section>
 <section class="sec" id="which"><h2>Which one when</h2><div class="pick"><div><b>A few hours in Paris</b><span>Free2move: take a car nearby and leave it anywhere in the Home Area; street parking is free.</span></div><div><b>Paris to or from CDG or Orly</b><span>Free2move: end the trip in the airport car parks (€17.99 at CDG, €11.99 at Orly).</span></div><div><b>Lyon and its airport</b><span>Leo&amp;Go: cars in car park P4 at Saint-Exupéry (EU/EEA licences).</span></div><div><b>Marseille</b><span>Citiz for a round trip from a station, or a private car on Turo.</span></div><div><b>With a non-EU licence</b><span>Getaround, Turo or Communauto: they accept foreign licences for short stays (Turo needs an IDP).</span></div></div></section>
@@ -349,12 +361,73 @@ footer span{opacity:.72; max-width:60ch}
   <nav class="foot-cty" aria-label="Car sharing guides by country"><b class="foot-hd">Car sharing guides</b><a href="austria.html">Austria</a> · <a href="belgium.html">Belgium</a> · <a href="bulgaria.html">Bulgaria</a> · <a href="croatia.html">Croatia</a> · <a href="cyprus.html">Cyprus</a> · <a href="czechia.html">Czechia</a> · <a href="denmark.html">Denmark</a> · <a href="estonia.html">Estonia</a> · <a href="finland.html">Finland</a> · <b>France</b> · <a href="germany.html">Germany</a> · <a href="greece.html">Greece</a> · <a href="hungary.html">Hungary</a> · <a href="iceland.html">Iceland</a> · <a href="ireland.html">Ireland</a> · <a href="italy.html">Italy</a> · <a href="latvia.html">Latvia</a> · <a href="liechtenstein.html">Liechtenstein</a> · <a href="lithuania.html">Lithuania</a> · <a href="luxembourg.html">Luxembourg</a> · <a href="moldova.html">Moldova</a> · <a href="netherlands.html">Netherlands</a> · <a href="north-macedonia.html">North Macedonia</a> · <a href="norway.html">Norway</a> · <a href="poland.html">Poland</a> · <a href="portugal.html">Portugal</a> · <a href="serbia.html">Serbia</a> · <a href="slovakia.html">Slovakia</a> · <a href="slovenia.html">Slovenia</a> · <a href="spain.html">Spain</a> · <a href="sweden.html">Sweden</a> · <a href="switzerland.html">Switzerland</a> · <a href="ukraine.html">Ukraine</a> · <a href="united-kingdom.html">United Kingdom</a></nav>
   <nav class="foot-cty" aria-label="Answers"><b class="foot-hd">Answers</b><a href="car-sharing-vs-rental-car.html">Car sharing vs a rental car</a> · <a href="vilnius-bolt-drive-citybee-spark.html">Bolt Drive vs CityBee vs Spark</a> · <a href="vilnius-riga-tallinn-one-way.html">Vilnius → Riga → Tallinn one way</a> · <a href="vilnius-airport-car-sharing.html">Vilnius Airport</a> · <a href="car-sharing-tourists-driving-licence.html">Licence rules for visitors</a> · <a href="rent-a-car-without-credit-card.html">Without a credit card</a></nav>
   <span><a href="https://www.instagram.com/skiptherental/" rel="me noopener" target="_blank">Instagram</a> · <a href="https://www.tiktok.com/@skiptherental" rel="me noopener" target="_blank">TikTok</a> · <a href="https://www.youtube.com/@SkiptheRental" rel="me noopener" target="_blank">YouTube</a> · <a href="https://www.facebook.com/profile.php?id=61595945318708" rel="me noopener" target="_blank">Facebook</a> · <a href="https://www.threads.com/@skiptherental" rel="me noopener" target="_blank">Threads</a></span>
-  <span><a href="about.html">About</a> · <a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · no cookies, no tracking</span>
+  <span><a href="about.html">About</a> · <a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · cookies only if you agree · <a href="#" class="js-consent">Cookie settings</a></span>
 </footer>
 <script>
 // The contact address is put together in the browser so bots reading raw HTML miss it.
 (function(){ var a = ["hello", "skiptherental.com"].join("@");
   document.querySelectorAll(".js-mail").forEach(function(el){ el.href = "mailto:" + a + "?subject=" + el.getAttribute("data-subject"); });
+})();
+</script>
+<script>
+(function(){
+  function hit(e){
+    var a = e.target.closest ? e.target.closest("a[data-app]") : null;
+    if (a && navigator.sendBeacon) try { navigator.sendBeacon("https://go.skiptherental.com/c/" + a.getAttribute("data-app")); } catch(x){}
+  }
+  document.addEventListener("click", hit);
+  document.addEventListener("auxclick", hit);
+})();
+</script>
+<style>
+.consent{position:fixed; z-index:90; left:12px; right:12px; bottom:max(12px, env(safe-area-inset-bottom, 0px)); max-width:560px; margin:0 auto; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); padding:16px 18px; display:flex; flex-direction:column; gap:12px; font:15px/1.45 var(--ui)}
+.consent[hidden]{display:none}
+.consent p{margin:0} .consent a{color:var(--go-text)}
+.consent .row{display:flex; gap:8px; flex-wrap:wrap}
+.consent button{flex:1 1 140px; min-height:44px; border-radius:999px; border:1.5px solid var(--ink); background:transparent; color:var(--ink); font:700 15px var(--ui); cursor:pointer}
+</style>
+<div class="consent" id="consent" role="dialog" aria-label="Cookies" hidden>
+<p>May I count visits with Google Analytics? It sets cookies and tells Google which pages you read. <a href="privacy.html">Privacy</a></p>
+<div class="row"><button type="button" class="no">No thanks</button><button type="button" class="yes">Yes, that's fine</button></div>
+</div>
+<script>
+(function(){
+  var ID = "G-FW2SQPDWWK", KEY = "str-consent", box = document.getElementById("consent");
+  function get(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } }
+  function put(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
+  function load(){
+    if (window.gtag) return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+    var s = document.createElement("script"); s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID; document.head.appendChild(s);
+  }
+  // Saying no after a yes removes Google's cookies and reloads without it.
+  function forget(){
+    window["ga-disable-" + ID] = true;   // stops it writing them back as the page unloads
+    document.cookie.split(";").forEach(function(c){
+      var n = c.split("=")[0].trim();
+      if (/^_ga/.test(n)) ["", "; domain=." + location.hostname.replace(/^www\./, "")].forEach(function(d){
+        document.cookie = n + "=; Max-Age=0; path=/" + d; });
+    });
+  }
+  function choose(v){
+    var was = get(); put(v); box.hidden = true;
+    if (v === "yes") load(); else if (was === "yes") { forget(); location.reload(); }
+  }
+  box.querySelector(".yes").addEventListener("click", function(){ choose("yes"); });
+  box.querySelector(".no").addEventListener("click", function(){ choose("no"); });
+  document.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest("a") : null;
+    if (!a) return;
+    if (a.classList.contains("js-consent")) { e.preventDefault(); box.hidden = false; return; }
+    var app = a.getAttribute("data-app");
+    if (app && window.gtag) gtag("event", "app_click", { link: app, transport_type: "beacon" });
+  });
+  var c = get();
+  if (c === "yes") load(); else if (c !== "no") box.hidden = false;
 })();
 </script>
 </body>
