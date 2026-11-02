@@ -177,6 +177,13 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
 .nx:hover{transform:translateY(-3px); box-shadow:var(--shadow)}
 .nx .flag{font-size:28px; line-height:1} .nx b{font:700 16px/1.2 var(--ui)} .nx span:last-child{font:600 13px/1.3 var(--ui); color:var(--muted)}
 .allc{margin:12px 0 0; font-size:15px} .allc a{color:var(--go-text); font-weight:600}
+.ghero .lead.nums{color:var(--ink); font-weight:600}
+.tblw{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.tbl{width:100%; border-collapse:collapse; font-size:15px}
+.tbl th,.tbl td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+.tbl th{font:700 13px/1.3 var(--ui); color:var(--muted); text-transform:uppercase; letter-spacing:.03em}
+.qa h3{font:700 18px/1.3 var(--ui); margin:18px 0 6px} .qa h3:first-child{margin-top:0}
+.qa p{margin:0; max-width:70ch; font-size:16px; line-height:1.55} .qa a{color:var(--go-text)}
 footer a{color:#fff; text-decoration:underline; text-underline-offset:3px}
 footer{margin:24px 12px 12px; border-radius:var(--r-xl); background:#131318; color:#fff; text-align:center; font-size:14px; padding:36px 24px calc(36px + env(safe-area-inset-bottom, 0px)); display:flex; flex-direction:column; align-items:center; gap:12px}
 footer .wm{height:26px; color:#fff}
@@ -202,6 +209,7 @@ footer span{opacity:.72; max-width:60ch}
     <h1 class="d-xxl"><span class="hflag" aria-hidden="true">🇦🇹</span> Car sharing in Austria</h1>
     <span class="rate ok">Easy in Vienna; elsewhere station cars, register early</span>
     <p class="lead">Free2move covers Vienna and its airport; everywhere else ÖBB Rail&amp;Drive rents cars at 59 stations, with the motorway vignette already in the car.</p>
+    <p class="lead nums">In November, 3 days and 300 km from Vienna: car sharing €133 (GoMore) against a typical rental at €216, so car sharing saves €83.</p>
     <div class="stats">
       <div class="stat"><b class="tab">5</b><span>services open to visitors</span></div>
       <div class="stat go"><b class="tab">€133</b><span>car sharing, Vienna · 3 days · 300 km (GoMore)</span></div>
@@ -222,7 +230,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Another city</span><b>Vienna only: drive anywhere, then come back to the Home Area to end</b></div>
     <div class="row"><span>Abroad</span><b>Only with the paid foreign-travel option in the app; €250 penalty without it</b></div>
     <div class="row"><span>Age</span><b>18+, licence held 1 year; under 21 pay a rookie fee</b></div>
-    <div class="row"><span>Deposit</span><b>€NaN</b></div>
+    <div class="row"><span>Deposit</span><b>Possible pre-authorisation before each rental depending on rental type, payment method…</b></div>
   </div>
   <ul class="notes facts"><li>Takes non-EU licences with an International Driving Permit or a certified translation, plus proof of entry.</li><li>Street parking in the Home Area is free. Fuel is included by the minute or hour, not on day rates: bring the car back at the same level.</li><li>Drop-off zones just outside the Home Area cost extra; a one-off €8 sign-up fee.</li></ul>
 </article><article class="opc">
@@ -235,7 +243,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Another city</span><b>No, the car goes back to its station</b></div>
     <div class="row"><span>Abroad</span><b>Europe and Switzerland allowed; foreign vignettes and charging abroad are on you</b></div>
     <div class="row"><span>Age</span><b>Licence held 1 year (some cars 3 years)</b></div>
-    <div class="row"><span>Deposit</span><b>None</b></div>
+    
   </div>
   <ul class="notes facts"><li>Every car has the Austrian motorway vignette; Vorarlberg cars also carry the Swiss one.</li><li>Sign-up checks take up to 3–5 working days and include a credit check.</li></ul>
 </article><article class="opc">
@@ -248,7 +256,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Another city</span><b>No, back to the station where you took it</b></div>
     <div class="row"><span>Abroad</span><b>Austria and Germany only</b></div>
     <div class="row"><span>Age</span><b>21+, licence held 1 year</b></div>
-    <div class="row"><span>Deposit</span><b>None</b></div>
+    
   </div>
   <ul class="notes facts"><li>Register in the sharetoo app with your licence, passport or ID card and a credit card.</li><li>Bring it back with at least 25% charge.</li></ul>
 </article><article class="opc">
@@ -261,7 +269,7 @@ footer span{opacity:.72; max-width:60ch}
     <div class="row"><span>Another city</span><b>No, back to its own station</b></div>
     <div class="row"><span>Abroad</span><b>All neighbouring countries; further on request by e-mail</b></div>
     <div class="row"><span>Age</span><b>18+</b></div>
-    <div class="row"><span>Deposit</span><b>€NaN</b></div>
+    <div class="row"><span>Deposit</span><b>Pre-authorisation of expected rental cost within 24 h before start</b></div>
   </div>
   <ul class="notes facts"><li>EU, EEA and Swiss licences only; accounts are approved in office hours.</li><li>Pay by debit or credit card only.</li><li>The €99 day rate includes 300 km once per booking, not per day; every car has the Austrian vignette.</li></ul>
 </article><article class="opc">
@@ -274,10 +282,11 @@ footer span{opacity:.72; max-width:60ch}
     
     <div class="row"><span>Abroad</span><b>EEA and Switzerland, if the owner allows it</b></div>
     <div class="row"><span>Age</span><b>21+, licence held 1 year</b></div>
-    <div class="row"><span>Deposit</span><b>None</b></div>
+    
   </div>
   <ul class="notes facts"><li>Private owners rent out their own cars; Getaround Austria now redirects here.</li><li>Registering as a tourist adds €2 a rental day; under 25, €15 a day more.</li></ul>
 </article></div></section>
+<section class="sec" id="signup"><h2>Can a visitor sign up?</h2><div class="tblw"><table class="tbl"><thead><tr><th>Service</th><th>Your licence</th><th>Age</th><th>Sign-up</th></tr></thead><tbody><tr><td><b>Free2move</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>18+ · 1 yr licence</td><td>In-app licence + identity check</td></tr><tr><td><b>ÖBB Rail&amp;Drive</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>— · 1 yr licence</td><td>Online licence + face scan</td></tr><tr><td><b>WienMobil Auto</b></td><td>Not limited to EU licences; check the terms for yours</td><td>21+ · 1 yr licence</td><td>Register in the sharetoo app, add WienMobil Auto</td></tr><tr><td><b>caruso carsharing</b></td><td>Only licences on their list; an International Driving Permit doesn't replace it</td><td>18+</td><td>Manual review during office hours after app registration</td></tr><tr><td><b>GoMore</b></td><td>Not limited to EU licences; check the terms for yours</td><td>21+ · 1 yr licence</td><td></td></tr></tbody></table></div><p class="revnote">From each operator's terms. The app has the final word. <a href="car-sharing-tourists-driving-licence.html">Licence rules in every country</a>.</p></section>
 <section class="sec" id="which"><h2>Which one when</h2><div class="pick"><div><b>A day in Vienna</b><span>Free2move: free street parking in the Home Area; fuel included by the minute or hour, not on day rates.</span></div><div><b>Landing at Vienna airport</b><span>Free2move: cars in car park P3, Level 0; €12.99 airport fee.</span></div><div><b>Graz, Linz, Salzburg or Innsbruck by train</b><span>ÖBB Rail&amp;Drive at the main station. Register a week ahead.</span></div><div><b>With a non-EU licence</b><span>Free2move (IDP or certified translation, plus proof of entry) or Rail&amp;Drive (licences valid in Austria).</span></div><div><b>Into the Alps or a neighbouring country</b><span>Rail&amp;Drive: vignette included, Europe and Switzerland allowed. caruso goes to every neighbouring country.</span></div></div></section>
 <section class="sec" id="airports"><h2>Airports</h2><div class="cards"><div class="cardx"><b><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 14l8-1 5-9h2.5l-2.5 9 5.5-.6L23 10h1.5l-1 4 1 4H23l-1.5-2.4-5.5-.6 2.5 9H16l-5-9-8-1z" fill="currentColor"/></svg>Vienna (VIE)</b><p>Free2move only: car park P3, Level 0, next to the terminal. Take the lift to Level 2 for the covered walkway. The barrier opens by itself; airport fee €12.99.</p></div><div class="cardx"><b><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 14l8-1 5-9h2.5l-2.5 9 5.5-.6L23 10h1.5l-1 4 1 4H23l-1.5-2.4-5.5-.6 2.5 9H16l-5-9-8-1z" fill="currentColor"/></svg>Rail&amp;Drive</b><p>No station at the airport. Its nearest Vienna cars are at city stations such as Hauptbahnhof, Westbahnhof and Praterstern.</p></div></div></section>
 <section class="sec" id="between"><h2>Between cities and countries</h2><ul class="ticks"><li>Free2move: drive as far as you like, but end only in Vienna's Home Area or its drop-off zones.</li><li>Rail&amp;Drive: 59 stations in all nine states. Eight in Vienna, plus Graz, Linz, Salzburg and Innsbruck main stations. The car goes back where you took it.</li><li>WienMobil Auto and caruso cars also go back to their own station.</li><li>Abroad: Rail&amp;Drive allows Europe and Switzerland, caruso the neighbouring countries, WienMobil Auto only Germany; Free2move only with its paid option.</li></ul></section>
@@ -285,6 +294,7 @@ footer span{opacity:.72; max-width:60ch}
 <section class="sec" id="before"><h2>Before you go</h2><ul class="ticks"><li>Motorways need a vignette. Rail&amp;Drive, caruso and tim cars have one; with the others, check before you drive. A digital 1-day vignette costs €9.60, 10 days €12.80 (2026).</li><li>Register early: Rail&amp;Drive checks take up to 3–5 working days; caruso approves accounts only in office hours.</li><li>Licences: Free2move takes non-EU ones with an IDP or certified translation and proof of entry; Rail&amp;Drive accepts international licences valid in Austria; caruso only EU, EEA and Swiss.</li><li>tim in Graz and Linz needs a membership with a 12-month minimum term, not made for a short visit.</li></ul></section>
 <section class="sec" id="better"><h2>Better than renting here</h2><div class="better"><div><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="7" fill="#2D9CFF"/><path d="M12 23V9h5.5a4.5 4.5 0 0 1 0 9H12" fill="none" stroke="#131318" stroke-width="2.6" stroke-linejoin="round"/></svg><span>Free street parking in Vienna's Home Area</span></div><div><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="7" fill="#2D9CFF"/><path d="M8 17l6-.8 4-7h2l-2 7 4.4-.5L24 14h1.2l-.8 3 .8 3H24l-1.6-1.7-4.4-.5 2 7h-2l-4-7-6-.8z" fill="#131318"/></svg><span>Free2move cars at Vienna airport</span></div><div><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="11" height="9" rx="3" fill="#2DB46B"/><rect x="18" y="5" width="11" height="9" rx="3" fill="#2DB46B"/><rect x="3" y="18" width="11" height="9" rx="3" fill="#2DB46B"/><rect x="18" y="18" width="11" height="9" rx="3" fill="#131318"/></svg><span>Rail&amp;Drive at 59 stations in all nine states</span></div><div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.8 12-11 14C9.8 27 5 22 5 15V7z" fill="#7C5CFF"/><path d="M11 16l3.5 3.5L21 13" fill="none" stroke="#131318" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Motorway vignette already in Rail&amp;Drive and caruso cars</span></div></div></section>
 <section class="sec" id="minuses"><h2>Be ready for</h2><ul class="ticks minus"><li>Only Vienna has free-floating cars; everywhere else the car goes back to its station.</li><li>Rail&amp;Drive takes up to 3–5 working days to approve you, with a credit check.</li><li>Free2move, WienMobil Auto and GoMore don't say their cars carry the Austrian vignette. Check before the motorway.</li><li>Free2move charges €500 for a car left outside the Home Area.</li></ul></section>
+<section class="sec" id="faq"><h2>Questions</h2><div class="qa"><h3>Can I use car sharing in Austria with a licence from outside the EU?</h3><p>All services open to visitors take licences from outside the EU in some form (Free2move, ÖBB Rail&Drive, WienMobil Auto, caruso carsharing and GoMore). Each app checks your licence at sign-up; the table above says what each one accepts.</p><h3>Do I need a credit card or a deposit?</h3><p>Free2move and caruso carsharing may hold an amount on your card or ask for a deposit; the cards above say what the terms publish. ÖBB Rail&Drive, WienMobil Auto and GoMore don't publish a deposit rule; the app shows it at sign-up. You add a bank card in the app and pay per trip. A rental desk usually wants a credit card in the driver's name and freezes a deposit.</p><h3>Can I take a shared car out of Austria?</h3><p>Free2move: the trip has to end in Austria. ÖBB Rail&Drive: may drive to 30 other European countries, but the trip has to end in Austria. WienMobil Auto: may drive to Germany, but the trip has to end in Austria. caruso carsharing: may drive to 8 other European countries, but the trip has to end in Austria. GoMore: may drive to 30 other European countries, but the trip has to end in Austria.</p><h3>Is car sharing cheaper than a rental car in Vienna?</h3><p>It depends on the trip. In November, one day and 60 km cost car sharing €39 (GoMore) against a typical rental at €109, so car sharing saves €70. Three days and 300 km cost car sharing €133 (GoMore) against a typical rental at €216, so car sharing saves €83. <a href="./#city=vienna">Check your own trip</a>.</p><h3>Can I pick up a car at the airport?</h3><p>Vienna (VIE): Free2move only: car park P3, Level 0, next to the terminal. Take the lift to Level 2 for the covered walkway. The barrier opens by itself; airport fee €12.99.</p></div></section>
 <section class="sec" id="reviews"><h2>What people say</h2><div class="revs"><figure class="rev positive">
   <blockquote>“Very easy, efficient and convenient, modern app and flawless customer experience.”</blockquote>
   <figcaption><span class="pf" style="background:#00B67A">★</span><span><b>Trustpilot</b> · Jan 2026 · about GoMore</span>

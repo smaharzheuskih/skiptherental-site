@@ -177,6 +177,13 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
 .nx:hover{transform:translateY(-3px); box-shadow:var(--shadow)}
 .nx .flag{font-size:28px; line-height:1} .nx b{font:700 16px/1.2 var(--ui)} .nx span:last-child{font:600 13px/1.3 var(--ui); color:var(--muted)}
 .allc{margin:12px 0 0; font-size:15px} .allc a{color:var(--go-text); font-weight:600}
+.ghero .lead.nums{color:var(--ink); font-weight:600}
+.tblw{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.tbl{width:100%; border-collapse:collapse; font-size:15px}
+.tbl th,.tbl td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+.tbl th{font:700 13px/1.3 var(--ui); color:var(--muted); text-transform:uppercase; letter-spacing:.03em}
+.qa h3{font:700 18px/1.3 var(--ui); margin:18px 0 6px} .qa h3:first-child{margin-top:0}
+.qa p{margin:0; max-width:70ch; font-size:16px; line-height:1.55} .qa a{color:var(--go-text)}
 footer a{color:#fff; text-decoration:underline; text-underline-offset:3px}
 footer{margin:24px 12px 12px; border-radius:var(--r-xl); background:#131318; color:#fff; text-align:center; font-size:14px; padding:36px 24px calc(36px + env(safe-area-inset-bottom, 0px)); display:flex; flex-direction:column; align-items:center; gap:12px}
 footer .wm{height:26px; color:#fff}
@@ -202,6 +209,7 @@ footer span{opacity:.72; max-width:60ch}
     <h1 class="d-xxl"><span class="hflag" aria-hidden="true">🇬🇧</span> Car sharing in the United Kingdom</h1>
     <span class="rate hard">Big car clubs need a UK address</span>
     <p class="lead">Zipcar left at the end of 2025 and the big car clubs need a UK address, so visitors are mostly left with Turo. Private owners' cars by the day.</p>
+    <p class="lead nums">In November, 3 days and 300 km from London: car sharing €309 (Kendall Go) against a typical rental at €112, so the rental is €197 cheaper.</p>
     <div class="stats">
       <div class="stat"><b class="tab">3</b><span>services open to visitors</span></div>
       <div class="stat go"><b class="tab">€309</b><span>car sharing, London · 3 days · 300 km (Kendall Go)</span></div>
@@ -222,7 +230,7 @@ footer span{opacity:.72; max-width:60ch}
     
     <div class="row"><span>Abroad</span><b>EU and a few neighbours only with the host's and Turo's approval, booked 7+ days ahead; £1,000 refundable deposit</b></div>
     <div class="row"><span>Age</span><b>21–74, licence held 1 year+</b></div>
-    <div class="row"><span>Deposit</span><b>€NaN</b></div>
+    <div class="row"><span>Deposit</span><b>Refundable deposit on some trips only: £250 if Turo's system picks the trip, £500…</b></div>
   </div>
   <ul class="notes facts"><li>Bring the physical licence: digital, temporary and learner licences aren't accepted.</li><li>Hosts can bill you the Congestion Charge (£18 a day), ULEZ (£12.50) and the Dartford Crossing up to 90 days after the trip.</li></ul>
 </article><article class="opc">
@@ -252,6 +260,7 @@ footer span{opacity:.72; max-width:60ch}
   </div>
   <ul class="notes facts"><li>Unlimited mileage; charging costs 30p/kWh after the first 5 kWh. Nothing if you bring it back full.</li><li>Terms ask for a UK or EU licence held 2 years (the FAQ says non-UK licences are checked one by one); delivery within Banbury is free.</li><li>5–7 days for £299 on the pricing page.</li></ul>
 </article></div></section>
+<section class="sec" id="signup"><h2>Can a visitor sign up?</h2><div class="tblw"><table class="tbl"><thead><tr><th>Service</th><th>Your licence</th><th>Age</th><th>Sign-up</th></tr></thead><tbody><tr><td><b>Turo</b></td><td>Not limited to EU licences; check the terms for yours</td><td>21+ · 1 yr licence</td><td>Book without creating an account</td></tr><tr><td><b>Kendall Go</b></td><td>Not only EU licences; an International Driving Permit is accepted</td><td>25+ · 1 yr licence</td><td>App sign-up with Veriff ID check</td></tr><tr><td><b>Zimbl</b></td><td>EU/EEA licences only</td><td>25+ · 2 yr licence</td><td>App: licence + selfie</td></tr></tbody></table></div><p class="revnote">From each operator's terms. The app has the final word. <a href="car-sharing-tourists-driving-licence.html">Licence rules in every country</a>.</p></section>
 <section class="sec" id="which"><h2>Which one when</h2><div class="pick"><div><b>Central London</b><span>Turo, if you must drive. Add the £18 Congestion Charge in the daytime, and £12.50 ULEZ for an older car.</span></div><div><b>A day out of London</b><span>Turo: a private car for the day; check the host's mileage allowance.</span></div><div><b>Staying in south-west London</b><span>Kendall Go: cars by the hour from bays in Wandsworth and New Malden (25+).</span></div><div><b>Oxfordshire</b><span>Zimbl: electric cars from Banbury, unlimited mileage.</span></div><div><b>Moving to the UK</b><span>Enterprise Car Club or Co Wheels, once you have a UK address.</span></div></div></section>
 
 <section class="sec" id="between"><h2>Between cities and countries</h2><ul class="ticks"><li>Kendall Go: round trips. The car goes back to its own bay; leaving mainland Britain needs written permission.</li><li>Turo: pick-up and return as agreed with the host. Trips to the EU need the host's and Turo's approval.</li><li>Zimbl: the car may not leave mainland Britain without written consent.</li></ul></section>
@@ -259,6 +268,7 @@ footer span{opacity:.72; max-width:60ch}
 <section class="sec" id="before"><h2>Before you go</h2><ul class="ticks"><li>Enterprise Car Club, Co Wheels and Hiyacar only accept UK residents. You need a UK address.</li><li>Visitors may drive cars on a full, valid licence from any country for 12 months from their last entry to Great Britain.</li><li>Turo: 21–74, licence held a year, physical card; drivers under 25 pay at least £25 a day.</li><li>Traffic keeps left; at roundabouts, give priority to traffic from your right.</li></ul></section>
 <section class="sec" id="better"><h2>Better than renting here</h2><div class="better"><div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.8 12-11 14C9.8 27 5 22 5 15V7z" fill="#7C5CFF"/><path d="M11 16l3.5 3.5L21 13" fill="none" stroke="#131318" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Excess down to £250 on Turo's top plan</span></div><div><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="11" height="9" rx="3" fill="#2DB46B"/><rect x="18" y="5" width="11" height="9" rx="3" fill="#2DB46B"/><rect x="3" y="18" width="11" height="9" rx="3" fill="#2DB46B"/><rect x="18" y="18" width="11" height="9" rx="3" fill="#131318"/></svg><span>Private owners' cars and vans on Turo</span></div><div><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="4" fill="#F2489B"/><rect x="12" y="7" width="8" height="14" rx="1.5" fill="#131318"/></svg><span>Book by the hour in an app (Kendall Go, Zimbl)</span></div></div></section>
 <section class="sec" id="minuses"><h2>Be ready for</h2><ul class="ticks minus"><li>Zipcar, the biggest club, closed at the end of 2025; the other big clubs need a UK address.</li><li>Central London: £18 Congestion Charge a day, plus £12.50 ULEZ for older cars.</li><li>No car sharing at any UK airport that we could confirm.</li><li>Traffic keeps left, and at roundabouts priority goes to traffic from the right.</li></ul></section>
+<section class="sec" id="faq"><h2>Questions</h2><div class="qa"><h3>Can I use car sharing in the United Kingdom with a licence from outside the EU?</h3><p>2 of the 3 services open to visitors take licences from outside the EU in some form (Turo and Kendall Go). Zimbl takes EU/EEA licences only. Each app checks your licence at sign-up; the table above says what each one accepts.</p><h3>Do I need a credit card or a deposit?</h3><p>Kendall Go and Zimbl take no deposit. Turo may hold an amount on your card or ask for a deposit; the cards above say what the terms publish. You add a bank card in the app and pay per trip. A rental desk usually wants a credit card in the driver's name and freezes a deposit.</p><h3>Can I take a shared car out of the United Kingdom?</h3><p>Turo: may drive to 35 other European countries, but the trip has to end in the United Kingdom. Kendall Go: United Kingdom only. Zimbl: United Kingdom only.</p><h3>Is car sharing cheaper than a rental car in London?</h3><p>It depends on the trip. In November, one day and 60 km cost car sharing €105 (Kendall Go) against a typical rental at €43, so the rental is €62 cheaper. Three days and 300 km cost car sharing €309 (Kendall Go) against a typical rental at €112, so the rental is €197 cheaper. <a href="./#city=london">Check your own trip</a>.</p></div></section>
 <section class="sec" id="reviews"><h2>What people say</h2><div class="revs"><figure class="rev positive">
   <blockquote>“Service works out great, no waiting times and many more options on cars compared to conventional rental companies.”</blockquote>
   <figcaption><span class="pf" style="background:#0D96F6">A</span><span><b>App Store</b> · May 2025 · about Turo</span>
