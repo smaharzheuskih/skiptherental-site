@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Skip the Rental</title>
-<meta name="description" content="A free hobby project: which car sharing is cheapest for your trip in Europe, what it costs against a rental car, and how to start.">
+<title>Car sharing vs rental car in Europe: free price calculator · Skip the Rental</title>
+<meta name="description" content="Type a city, dates and kilometres: see what your trip really costs by car sharing and by rental car, fuel and fees included. 39 countries, free.">
 <link rel="canonical" href="https://skiptherental.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Skip the Rental">
@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://skiptherental.com/img/hero-scene.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://skiptherental.com/#website","url":"https://skiptherental.com/","name":"Skip the Rental","alternateName":["skiptherental.com","SkipTheRental"],"inLanguage":"en","publisher":{"@id":"https://skiptherental.com/#org"}},{"@type":"Organization","@id":"https://skiptherental.com/#org","name":"Skip the Rental","url":"https://skiptherental.com/","logo":{"@type":"ImageObject","url":"https://skiptherental.com/img/logo-512.png","width":512,"height":512},"description":"A free hobby site that prices the same trip by car sharing and by rental car in Europe. No ads, no affiliate links.","sameAs":["https://www.instagram.com/skiptherental/","https://www.tiktok.com/@skiptherental","https://www.youtube.com/@SkiptheRental","https://www.facebook.com/profile.php?id=61595945318708","https://www.threads.com/@skiptherental"],"founder":{"@id":"https://skiptherental.com/about.html#gabriel"},"parentOrganization":{"@type":"Organization","name":"MB „Expat Mates“","identifier":"306289251","address":{"@type":"PostalAddress","addressCountry":"LT"}}},{"@type":"Person","@id":"https://skiptherental.com/about.html#gabriel","name":"Gabriel","url":"https://skiptherental.com/about.html","description":"Lives in Lithuania, drives car sharing there and edits Skip the Rental.","homeLocation":{"@type":"Country","name":"Lithuania"},"worksFor":{"@id":"https://skiptherental.com/#org"}},{"@type":"WebPage","@id":"https://skiptherental.com/#webpage","url":"https://skiptherental.com/","name":"Car sharing vs rental car in Europe: free price calculator","inLanguage":"en","dateModified":"2026-11-02","isPartOf":{"@id":"https://skiptherental.com/#website"},"about":{"@id":"https://skiptherental.com/#org"}}]}</script>
 <style>
 @font-face{font-family:"Sora";font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/Sora-Regular.woff2) format("woff2")}
 @font-face{font-family:"Sora";font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/Sora-SemiBold.woff2) format("woff2")}
@@ -267,7 +268,7 @@ details.sub[open] summary::after{content:"–"}
 .li .tag{display:inline-block; margin-left:6px; padding:2px 8px; border-radius:999px; background:var(--go); color:#131318; font:700 11px/1.4 var(--ui); vertical-align:2px}
 .verdict .back{background:none; border:0; padding:0; color:var(--go-text); font:600 14px var(--ui); text-decoration:underline; cursor:pointer; justify-self:start; text-align:left}
 .cty-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px}
-.cty{position:relative; border:0; cursor:pointer; text-align:left; background:var(--soft); border-radius:var(--r-l); padding:14px 14px 12px;
+.cty{position:relative; border:0; cursor:pointer; text-align:left; background:var(--soft); border-radius:var(--r-l); padding:14px 14px 12px; color:inherit; text-decoration:none; font:inherit;
   display:flex; flex-direction:column; gap:4px; transition:transform .15s ease, box-shadow .15s ease; min-height:118px}
 .cty:hover{transform:translateY(-3px); box-shadow:var(--shadow)}
 .cty .flag{font-size:30px; line-height:1}
@@ -295,6 +296,9 @@ footer{margin:0 12px 12px; border-radius:var(--r-xl); background:#131318; color:
   display:flex; flex-direction:column; align-items:center; gap:12px}
 footer .wm{height:26px; color:#fff}
 footer span{opacity:.72; max-width:60ch}
+footer .foot-cty{max-width:86ch; font-size:13.5px; line-height:1.95; opacity:.86}
+footer .foot-cty a{white-space:nowrap}
+footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bottom:2px}
 
 .drawer{position:fixed; inset:0 0 0 auto; z-index:70; width:min(520px,100vw); background:var(--surface); box-shadow:-20px 0 60px rgba(0,0,0,.18);
   transform:translateX(102%); transition:transform .26s ease; display:flex; flex-direction:column; border-radius:var(--r-xl) 0 0 var(--r-xl)}
@@ -424,7 +428,7 @@ footer span{opacity:.72; max-width:60ch}
 <div class="band" id="countries">
   <h2 class="sec">Where it works</h2>
   <div class="cty-legend"><span><i style="background:var(--go)"></i>prices checked every night</span><span><i style="background:var(--sky)"></i>official price list</span><span><i style="background:var(--sun)"></i>prices in the apps</span></div>
-  <div class="cty-grid" id="countryGrid"></div>
+  <div class="cty-grid" id="countryGrid"><a class="cty live" href="austria.html"><span class="flag" aria-hidden="true">🇦🇹</span><b>Austria</b><span class="save win">Save €83 · Vienna</span><em>Guide →</em></a><a class="cty live" href="belgium.html"><span class="flag" aria-hidden="true">🇧🇪</span><b>Belgium</b><span class="save win">Save €42 · Brussels</span><em>Guide →</em></a><a class="cty live" href="bulgaria.html"><span class="flag" aria-hidden="true">🇧🇬</span><b>Bulgaria</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="denmark.html"><span class="flag" aria-hidden="true">🇩🇰</span><b>Denmark</b><span class="save win">Save €21 · Copenhagen</span><em>Guide →</em></a><a class="cty live" href="estonia.html"><span class="flag" aria-hidden="true">🇪🇪</span><b>Estonia</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="france.html"><span class="flag" aria-hidden="true">🇫🇷</span><b>France</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="germany.html"><span class="flag" aria-hidden="true">🇩🇪</span><b>Germany</b><span class="save win">Save €97 · Berlin</span><em>Guide →</em></a><a class="cty live" href="hungary.html"><span class="flag" aria-hidden="true">🇭🇺</span><b>Hungary</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="ireland.html"><span class="flag" aria-hidden="true">🇮🇪</span><b>Ireland</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="italy.html"><span class="flag" aria-hidden="true">🇮🇹</span><b>Italy</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="latvia.html"><span class="flag" aria-hidden="true">🇱🇻</span><b>Latvia</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="lithuania.html"><span class="flag" aria-hidden="true">🇱🇹</span><b>Lithuania</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="luxembourg.html"><span class="flag" aria-hidden="true">🇱🇺</span><b>Luxembourg</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="netherlands.html"><span class="flag" aria-hidden="true">🇳🇱</span><b>Netherlands</b><span class="save win">Save €62 · Amsterdam</span><em>Guide →</em></a><a class="cty live" href="norway.html"><span class="flag" aria-hidden="true">🇳🇴</span><b>Norway</b><span class="save win">Save €9 · Oslo</span><em>Guide →</em></a><a class="cty live" href="serbia.html"><span class="flag" aria-hidden="true">🇷🇸</span><b>Serbia</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="spain.html"><span class="flag" aria-hidden="true">🇪🇸</span><b>Spain</b><span class="save win">Save €23 · Madrid</span><em>Guide →</em></a><a class="cty live" href="switzerland.html"><span class="flag" aria-hidden="true">🇨🇭</span><b>Switzerland</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty live" href="united-kingdom.html"><span class="flag" aria-hidden="true">🇬🇧</span><b>United Kingdom</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty verified" href="finland.html"><span class="flag" aria-hidden="true">🇫🇮</span><b>Finland</b><span class="save win">Save €65 · Helsinki</span><em>Guide →</em></a><a class="cty verified" href="greece.html"><span class="flag" aria-hidden="true">🇬🇷</span><b>Greece</b><span class="save ">Prices in the apps</span><em>Guide →</em></a><a class="cty verified" href="liechtenstein.html"><span class="flag" aria-hidden="true">🇱🇮</span><b>Liechtenstein</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty verified" href="slovenia.html"><span class="flag" aria-hidden="true">🇸🇮</span><b>Slovenia</b><span class="save lose">A rental is often cheaper</span><em>Guide →</em></a><a class="cty verified" href="sweden.html"><span class="flag" aria-hidden="true">🇸🇪</span><b>Sweden</b><span class="save win">Save €74 · Stockholm</span><em>Guide →</em></a><a class="cty mapped" href="croatia.html"><span class="flag" aria-hidden="true">🇭🇷</span><b>Croatia</b><span class="save ">Residents only</span><em>Guide →</em></a><a class="cty mapped" href="cyprus.html"><span class="flag" aria-hidden="true">🇨🇾</span><b>Cyprus</b><span class="save ">Prices in the apps</span><em>Guide →</em></a><a class="cty mapped" href="czechia.html"><span class="flag" aria-hidden="true">🇨🇿</span><b>Czechia</b><span class="save ">Prices in the apps</span><em>Guide →</em></a><a class="cty mapped" href="iceland.html"><span class="flag" aria-hidden="true">🇮🇸</span><b>Iceland</b><span class="save ">Residents only</span><em>Guide →</em></a><a class="cty mapped" href="moldova.html"><span class="flag" aria-hidden="true">🇲🇩</span><b>Moldova</b><span class="save ">Residents only</span><em>Guide →</em></a><a class="cty mapped" href="north-macedonia.html"><span class="flag" aria-hidden="true">🇲🇰</span><b>North Macedonia</b><span class="save ">Residents only</span><em>Guide →</em></a><a class="cty mapped" href="poland.html"><span class="flag" aria-hidden="true">🇵🇱</span><b>Poland</b><span class="save ">Prices in the apps</span><em>Guide →</em></a><a class="cty mapped" href="portugal.html"><span class="flag" aria-hidden="true">🇵🇹</span><b>Portugal</b><span class="save ">Prices in the apps</span><em>Guide →</em></a><a class="cty mapped" href="ukraine.html"><span class="flag" aria-hidden="true">🇺🇦</span><b>Ukraine</b><span class="save ">Residents only</span><em>Guide →</em></a></div>
 </div>
 
 <!-- ================================================================= what travellers say -->
@@ -473,7 +477,9 @@ footer span{opacity:.72; max-width:60ch}
   <span>A free hobby project from Lithuania, run through MB „Expat Mates“ (company code 306289251). Prices come from the operators' own price lists. The app always has the final word.</span>
   <span id="footMeta"></span>
   <span id="footMail"></span>
-  <span><a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · no cookies, no tracking</span>
+  <nav class="foot-cty" aria-label="Car sharing guides by country"><b class="foot-hd">Car sharing guides</b><a href="austria.html">Austria</a> · <a href="belgium.html">Belgium</a> · <a href="bulgaria.html">Bulgaria</a> · <a href="croatia.html">Croatia</a> · <a href="cyprus.html">Cyprus</a> · <a href="czechia.html">Czechia</a> · <a href="denmark.html">Denmark</a> · <a href="estonia.html">Estonia</a> · <a href="finland.html">Finland</a> · <a href="france.html">France</a> · <a href="germany.html">Germany</a> · <a href="greece.html">Greece</a> · <a href="hungary.html">Hungary</a> · <a href="iceland.html">Iceland</a> · <a href="ireland.html">Ireland</a> · <a href="italy.html">Italy</a> · <a href="latvia.html">Latvia</a> · <a href="liechtenstein.html">Liechtenstein</a> · <a href="lithuania.html">Lithuania</a> · <a href="luxembourg.html">Luxembourg</a> · <a href="moldova.html">Moldova</a> · <a href="netherlands.html">Netherlands</a> · <a href="north-macedonia.html">North Macedonia</a> · <a href="norway.html">Norway</a> · <a href="poland.html">Poland</a> · <a href="portugal.html">Portugal</a> · <a href="serbia.html">Serbia</a> · <a href="slovakia.html">Slovakia</a> · <a href="slovenia.html">Slovenia</a> · <a href="spain.html">Spain</a> · <a href="sweden.html">Sweden</a> · <a href="switzerland.html">Switzerland</a> · <a href="ukraine.html">Ukraine</a> · <a href="united-kingdom.html">United Kingdom</a></nav>
+  <span><a href="https://www.instagram.com/skiptherental/" rel="me noopener" target="_blank">Instagram</a> · <a href="https://www.tiktok.com/@skiptherental" rel="me noopener" target="_blank">TikTok</a> · <a href="https://www.youtube.com/@SkiptheRental" rel="me noopener" target="_blank">YouTube</a> · <a href="https://www.facebook.com/profile.php?id=61595945318708" rel="me noopener" target="_blank">Facebook</a> · <a href="https://www.threads.com/@skiptherental" rel="me noopener" target="_blank">Threads</a></span>
+  <span><a href="about.html">About</a> · <a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · no cookies, no tracking</span>
 </footer>
 
 <div class="scrim" id="scrim"></div>
@@ -1720,34 +1726,10 @@ function renderHow(res, chosen){
 }
 
 /* ====================================================== countries */
-// A flag from the two-letter code (regional indicator letters). Systems
-// without flag glyphs show the letters, which still reads fine.
-function flag(cc){ return String.fromCodePoint.apply(null, cc.toUpperCase().split("").map(function(ch){ return 127397 + ch.charCodeAt(0); })); }
+// The grid is written into the page at build time (scripts/build-site.mjs):
+// guides are plain links; countries without one open the drawer.
 function renderCountries(){
-  var order = { live:0, verified:1, mapped:2, none:3 };
-  var codes = Object.keys(DB.countries).filter(function(cc){ return (DB.countries[cc].coverage || "none") !== "none"; })
-    .sort(function(a,b){ return (order[DB.countries[a].coverage] - order[DB.countries[b].coverage]) || countryName(a).localeCompare(countryName(b)); });
-  var month = new Date(state.from).getMonth() + 1;
-  $("countryGrid").innerHTML = codes.map(function(cc){
-    // The saving on 3 days / 300 km in the country's main city — the first one
-    // in its list that has car sharing with a price (outliers stay out).
-    var c = DB.countries[cc], line = "", cls = "", best = null, anyPriced = false, anyApp = false;
-    (c.cities || []).filter(function(id){ return DB.cities[id]; }).slice(0, 6).forEach(function(id){
-      var r = compare(DB, { city: id, days: 3, km: 300, cls: "econ", month: month, countries: [cc], nonEuLicence: false }), b = r.carsharing[0];
-      if(b){ anyPriced = true; if(!best) best = { save: r.rental.high.total - b.total, city: DB.cities[id].name }; }
-      if(r.inApp.length) anyApp = true;
-    });
-    if(best && best.save > 0){ line = "Save " + eur(best.save) + " · " + best.city; cls = "win"; }
-    else if(anyPriced){ line = "A rental is often cheaper"; cls = "lose"; }
-    else line = anyApp ? "Prices in the apps" : "Residents only";
-    var guide = DB.guides && DB.guides[cc];
-    return '<button class="cty ' + c.coverage + '" data-cc="' + cc + '"' + (guide ? ' data-guide="' + guide + '"' : '') + '>'
-      + '<span class="flag" aria-hidden="true">' + flag(cc) + '</span><b>' + esc(c.name) + '</b>'
-      + '<span class="save ' + cls + '">' + esc(line) + '</span>' + (guide ? '<em>Guide →</em>' : '') + '</button>';
-  }).join("");
-  $("countryGrid").querySelectorAll(".cty").forEach(function(b){ b.addEventListener("click", function(){
-    if(b.dataset.guide) location.href = b.dataset.guide; else openCountry(b.dataset.cc);
-  }); });
+  $("countryGrid").querySelectorAll("button.cty").forEach(function(b){ b.addEventListener("click", function(){ openCountry(b.dataset.cc); }); });
 }
 function openCountry(cc){
   var c = DB.countries[cc], notes = c.notes || {};
