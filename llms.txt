@@ -1,0 +1,51 @@
+# Skip the Rental
+
+> A free hobby site that prices the same European trip twice: as a rental car and as car sharing, with every fee each side would actually charge. Prices are read nightly or checked by hand, and every page shows when. No ads, no affiliate links.
+
+Run by Gabriel in Lithuania, through MB „Expat Mates“.
+
+## Main pages
+
+- [Trip calculator](https://skiptherental.com/): pick a city, dates and kilometres; see rental vs car sharing in euros
+- [How we calculate](https://skiptherental.com/how-we-calculate.html): what is counted on each side and where the numbers come from
+
+## Country guides (34)
+
+- [Car sharing in Austria](https://skiptherental.com/austria.html)
+- [Car sharing in Belgium](https://skiptherental.com/belgium.html)
+- [Car sharing in Bulgaria](https://skiptherental.com/bulgaria.html)
+- [Car sharing in Switzerland](https://skiptherental.com/switzerland.html)
+- [Car sharing in Cyprus](https://skiptherental.com/cyprus.html)
+- [Car sharing in Czechia](https://skiptherental.com/czechia.html)
+- [Car sharing in Germany](https://skiptherental.com/germany.html)
+- [Car sharing in Denmark](https://skiptherental.com/denmark.html)
+- [Car sharing in Estonia](https://skiptherental.com/estonia.html)
+- [Car sharing in Spain](https://skiptherental.com/spain.html)
+- [Car sharing in Finland](https://skiptherental.com/finland.html)
+- [Car sharing in France](https://skiptherental.com/france.html)
+- [Car sharing in United Kingdom](https://skiptherental.com/united-kingdom.html)
+- [Car sharing in Greece](https://skiptherental.com/greece.html)
+- [Car sharing in Croatia](https://skiptherental.com/croatia.html)
+- [Car sharing in Hungary](https://skiptherental.com/hungary.html)
+- [Car sharing in Ireland](https://skiptherental.com/ireland.html)
+- [Car sharing in Iceland](https://skiptherental.com/iceland.html)
+- [Car sharing in Italy](https://skiptherental.com/italy.html)
+- [Car sharing in Liechtenstein](https://skiptherental.com/liechtenstein.html)
+- [Car sharing in Lithuania](https://skiptherental.com/lithuania.html)
+- [Car sharing in Luxembourg](https://skiptherental.com/luxembourg.html)
+- [Car sharing in Latvia](https://skiptherental.com/latvia.html)
+- [Car sharing in Moldova](https://skiptherental.com/moldova.html)
+- [Car sharing in North Macedonia](https://skiptherental.com/north-macedonia.html)
+- [Car sharing in Netherlands](https://skiptherental.com/netherlands.html)
+- [Car sharing in Norway](https://skiptherental.com/norway.html)
+- [Car sharing in Poland](https://skiptherental.com/poland.html)
+- [Car sharing in Portugal](https://skiptherental.com/portugal.html)
+- [Car sharing in Serbia](https://skiptherental.com/serbia.html)
+- [Car sharing in Sweden](https://skiptherental.com/sweden.html)
+- [Car sharing in Slovenia](https://skiptherental.com/slovenia.html)
+- [Car sharing in Slovakia](https://skiptherental.com/slovakia.html)
+- [Car sharing in Ukraine](https://skiptherental.com/ukraine.html)
+
+## Optional
+
+- [Privacy](https://skiptherental.com/privacy.html)
