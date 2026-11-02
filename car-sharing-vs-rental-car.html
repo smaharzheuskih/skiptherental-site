@@ -251,5 +251,13 @@ footer span{opacity:.72; max-width:60ch}
   if (c === "yes") load(); else if (c !== "no") box.hidden = false;
 })();
 </script>
+<script>
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest("a[href]");
+  if(!a || a.host === location.host || !/^https?:$/.test(a.protocol) || !window.goatcounter || !goatcounter.count) return;
+  goatcounter.count({ path: "out/" + a.hostname.replace(/^www\./, ""), title: (a.textContent || "").trim().slice(0, 60), event: true });
+});
+</script>
+<script data-goatcounter="https://skiptherental.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

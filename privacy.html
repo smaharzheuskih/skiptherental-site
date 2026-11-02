@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy · Skip the Rental</title>
-<meta name="description" content="What Skip the Rental collects: Google Analytics only if you agree to cookies, and plain click counts on the app buttons. No ads, no sign-up.">
+<meta name="description" content="What Skip the Rental collects: anonymous visit counts without cookies, Google Analytics only if you agree to cookies, and plain click counts on the app buttons. No ads, no sign-up.">
 <link rel="canonical" href="https://skiptherental.com/privacy.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Skip the Rental">
 <meta property="og:title" content="Privacy">
-<meta property="og:description" content="What Skip the Rental collects: Google Analytics only if you agree to cookies, and plain click counts on the app buttons. No ads, no sign-up.">
+<meta property="og:description" content="What Skip the Rental collects: anonymous visit counts without cookies, Google Analytics only if you agree to cookies, and plain click counts on the app buttons. No ads, no sign-up.">
 <meta property="og:url" content="https://skiptherental.com/privacy.html">
 <meta property="og:image" content="https://skiptherental.com/img/og/home.jpg">
 <meta property="og:image:width" content="1200">
@@ -131,11 +131,13 @@ footer span{opacity:.72; max-width:60ch}
   <nav aria-label="Sections"><a href="./#trip">Check my trip</a><a href="./#countries">Countries</a><a href="how-we-calculate.html">How we calculate</a></nav></header>
 <main class="page">
 <h1>Privacy</h1>
-<p>Short version: no ads, no sign-up, nothing to sell. Google Analytics runs only if you say yes in the cookie banner. Clicks on the app buttons are counted as plain numbers, with nothing about you.</p>
+<p>Short version: no ads, no sign-up, nothing to sell. I count visits anonymously, without cookies. Google Analytics runs only if you say yes in the cookie banner. Clicks on the app buttons are counted as plain numbers, with nothing about you.</p>
 <h2>Who runs it</h2>
 <p>Gabriel. I run it through my small Lithuanian company, MB „Expat Mates“ (company code 306289251). It's a free hobby project and sells nothing. You can write to me at <a class="js-mail" href="#">this address</a>.</p>
 <h2>Your trip</h2>
 <p>The city, dates and distance you type are used to calculate the prices right in your browser. They are not sent anywhere and not stored.</p>
+<h2>Visit counter</h2>
+<p>I use GoatCounter (<a href="https://www.goatcounter.com/help/privacy" rel="noopener" target="_blank">goatcounter.com</a>) to count visits. It sets no cookies and does not store your IP address or any tracking ID. It keeps only totals: which page was opened, which site or campaign link you came from (for example a link tagged <code>utm_source=instagram</code>), browser, screen size, language and country. Clicks on links that leave this site, such as the tip button and links to car-sharing services, are counted the same way. GoatCounter is run from Ireland and stores data on servers in Finland and Germany. I use these numbers only to improve the site. If your browser blocks the counter, the site works exactly the same.</p>
 <h2>Google Analytics, only if you agree</h2>
 <p>When you first open the site, a banner asks whether I may count visits with Google Analytics. Until you say yes, it isn't loaded at all. If you say yes, Google Analytics sets its cookies (<code>_ga</code> and <code>_ga_…</code>) and tells Google which pages you open, your rough location (country and city), your device and browser type, and which site sent you. Google Analytics does not store IP addresses. Google signals and ad personalisation are switched off, and the data is kept for two months. I use it only to see which pages and countries people read. Google processes the data for me and may handle it in the United States under the EU–US Data Privacy Framework; see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">how Google uses data from sites that use its services</a>.</p>
 <p>Your yes or no is kept in your own browser (local storage, not a cookie) so the banner doesn't ask again. Change your mind at any time with <a href="#" class="js-consent">Cookie settings</a> at the bottom of every page; saying no removes Google's cookies.</p>
@@ -226,5 +228,13 @@ footer span{opacity:.72; max-width:60ch}
   if (c === "yes") load(); else if (c !== "no") box.hidden = false;
 })();
 </script>
+<script>
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest("a[href]");
+  if(!a || a.host === location.host || !/^https?:$/.test(a.protocol) || !window.goatcounter || !goatcounter.count) return;
+  goatcounter.count({ path: "out/" + a.hostname.replace(/^www\./, ""), title: (a.textContent || "").trim().slice(0, 60), event: true });
+});
+</script>
+<script data-goatcounter="https://skiptherental.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
