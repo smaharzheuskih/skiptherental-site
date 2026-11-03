@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="Skip the Rental: car sharing or a rental car? A free price check for trips in Europe">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://skiptherental.com/#website","url":"https://skiptherental.com/","name":"Skip the Rental","alternateName":["skiptherental.com","SkipTheRental"],"inLanguage":"en","publisher":{"@id":"https://skiptherental.com/#org"}},{"@type":"Organization","@id":"https://skiptherental.com/#org","name":"Skip the Rental","url":"https://skiptherental.com/","logo":{"@type":"ImageObject","url":"https://skiptherental.com/img/logo-512.png","width":512,"height":512},"description":"A free hobby site that prices the same trip by car sharing and by rental car in Europe. No ads, no affiliate links.","sameAs":["https://www.instagram.com/skiptherental/","https://www.tiktok.com/@skiptherental","https://www.youtube.com/@SkiptheRental","https://www.facebook.com/profile.php?id=61595945318708","https://www.threads.com/@skiptherental"],"founder":{"@id":"https://skiptherental.com/about.html#gabriel"},"parentOrganization":{"@type":"Organization","name":"MB „Expat Mates“","identifier":"306289251","address":{"@type":"PostalAddress","addressCountry":"LT"}}},{"@type":"Person","@id":"https://skiptherental.com/about.html#gabriel","name":"Gabriel","url":"https://skiptherental.com/about.html","description":"Lives in Lithuania, drives car sharing there and edits Skip the Rental.","homeLocation":{"@type":"Country","name":"Lithuania"},"worksFor":{"@id":"https://skiptherental.com/#org"}},{"@type":"WebPage","@id":"https://skiptherental.com/#webpage","url":"https://skiptherental.com/","name":"Car sharing vs rental car in Europe: free price calculator","inLanguage":"en","dateModified":"2026-11-03T00:00:00Z","isPartOf":{"@id":"https://skiptherental.com/#website"},"about":{"@id":"https://skiptherental.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://skiptherental.com/#website","url":"https://skiptherental.com/","name":"Skip the Rental","alternateName":["skiptherental.com","SkipTheRental"],"inLanguage":"en","publisher":{"@id":"https://skiptherental.com/#org"}},{"@type":"Organization","@id":"https://skiptherental.com/#org","name":"Skip the Rental","url":"https://skiptherental.com/","logo":{"@type":"ImageObject","url":"https://skiptherental.com/img/logo-512.png","width":512,"height":512},"description":"A free hobby site that prices the same trip by car sharing and by rental car in Europe. No ads, no affiliate links.","sameAs":["https://www.instagram.com/skiptherental/","https://www.tiktok.com/@skiptherental","https://www.youtube.com/@SkiptheRental","https://www.facebook.com/profile.php?id=61595945318708","https://www.threads.com/@skiptherental","https://x.com/skiptherental"],"founder":{"@id":"https://skiptherental.com/about.html#gabriel"},"parentOrganization":{"@type":"Organization","name":"MB „Expat Mates“","identifier":"306289251","address":{"@type":"PostalAddress","addressCountry":"LT"}}},{"@type":"Person","@id":"https://skiptherental.com/about.html#gabriel","name":"Gabriel","url":"https://skiptherental.com/about.html","description":"Lives in Lithuania, drives car sharing there and edits Skip the Rental.","homeLocation":{"@type":"Country","name":"Lithuania"},"worksFor":{"@id":"https://skiptherental.com/#org"}},{"@type":"WebPage","@id":"https://skiptherental.com/#webpage","url":"https://skiptherental.com/","name":"Car sharing vs rental car in Europe: free price calculator","inLanguage":"en","dateModified":"2026-11-03T00:00:00Z","isPartOf":{"@id":"https://skiptherental.com/#website"},"about":{"@id":"https://skiptherental.com/#org"}}]}</script>
 <style>
 @font-face{font-family:"Sora";font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/Sora-Regular.woff2) format("woff2")}
 @font-face{font-family:"Sora";font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/Sora-SemiBold.woff2) format("woff2")}
@@ -267,6 +267,15 @@ details.sub[open] summary::after{content:"–"}
 .why small{display:block; margin-top:8px; font:600 14px var(--ui); opacity:.8}
 .why-act{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
 .why .btn-line{color:#131318; box-shadow:inset 0 0 0 2px #131318; background:transparent}
+.why-soc{display:grid; gap:10px; margin-top:18px; font:700 15px var(--ui)}
+.why-soc .soc{justify-content:start}
+.why .soc a{color:#fff; background:#131318; box-shadow:none}
+.thanks{position:relative; margin-top:14px; border-radius:var(--r-l); background:var(--sun-soft); color:var(--ink); padding:18px 52px 18px 20px}
+.thanks p{margin:0 0 12px; font:600 16px/1.45 var(--ui); max-width:52ch}
+.thanks .row{display:flex; flex-wrap:wrap; gap:8px}
+.thanks .btn-ink{background:#2DB46B; color:#131318; box-shadow:none}
+.thanks .x{position:absolute; top:8px; right:8px; width:40px; height:40px; border:0; border-radius:50%; background:transparent; color:var(--muted); font:400 24px/1 var(--ui); cursor:pointer}
+.thanks .x:hover{color:var(--ink)}
 .verdict .note{font-size:13px}
 .myq{margin-top:4px; padding:16px 18px; border-radius:var(--r-l); background:var(--sun-soft); display:flex; flex-direction:column; gap:10px}
 .myq label{font-size:15px} .myq label b{font-weight:700}
@@ -320,6 +329,14 @@ footer span{opacity:.72; max-width:60ch}
 footer .foot-cty{max-width:86ch; font-size:13.5px; line-height:1.95; opacity:.86}
 footer .foot-cty a{white-space:nowrap}
 footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bottom:2px}
+footer .foot-soc .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bottom:10px}
+/* one row that shrinks on narrow phones instead of wrapping */
+.soc{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,46px); justify-content:center; gap:8px}
+.soc a{aspect-ratio:1; border-radius:50%; display:grid; place-items:center; color:inherit; box-shadow:inset 0 0 0 1.5px currentColor; transition:transform .15s ease}
+.soc a:hover{transform:translateY(-2px)}
+.soc a:focus-visible{outline:3px solid var(--focus, #2D7FE0); outline-offset:2px}
+.soc svg{width:21px; height:21px; fill:currentColor}
+footer .soc a{color:#fff; background:rgba(255,255,255,.08); box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
 
 .drawer{position:fixed; inset:0 0 0 auto; z-index:70; width:min(520px,100vw); background:var(--surface); box-shadow:-20px 0 60px rgba(0,0,0,.18);
   transform:translateX(102%); transition:transform .26s ease; display:flex; flex-direction:column; border-radius:var(--r-xl) 0 0 var(--r-xl)}
@@ -426,7 +443,17 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
   <section class="step" id="answer-step">
     <span class="n">2</span>
     <div class="hd"><h2 class="d-l">Your answer</h2><p id="tripLine">—</p></div>
-    <div class="body"><div class="answer" id="answer" aria-live="polite"></div></div>
+    <div class="body"><div class="answer" id="answer" aria-live="polite"></div>
+      <div class="thanks" id="thanks" aria-live="polite" hidden>
+        <button type="button" class="x" id="thanksX" aria-label="Close">×</button>
+        <div id="thanksAsk"><p>Was this useful?</p>
+          <div class="row"><button type="button" class="btn btn-ink btn-sm" id="usefulYes">Yes</button><button type="button" class="btn btn-line btn-sm" id="usefulNo">Not really</button></div></div>
+        <div id="thanksYes" hidden><p>Glad it helped! It's a free hobby project with no ads. Chip in €2 to keep it that way?</p>
+          <div class="row"><a class="btn btn-ink btn-sm" id="thanksTip" href="#" target="_blank" rel="noopener">Tip €2 on Ko-fi</a><button type="button" class="btn btn-line btn-sm" id="thanksLater">Maybe later</button></div></div>
+        <div id="thanksNo" hidden><p>What was missing? Tell me and I'll look into it.</p>
+          <div class="row"><a class="btn btn-ink btn-sm" id="thanksMail" href="#">Write to me</a></div></div>
+        <p id="thanksDone" hidden>Thank you! That keeps the site free.</p>
+      </div></div>
   </section>
 
   <section class="step">
@@ -442,7 +469,8 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
     <img class="face" src="img/gabriel.jpg" alt="Gabriel" width="180" height="225" loading="lazy">
     <div><p>I'm Gabriel. I travel a lot, and the rental desk kept getting me: prices jumping in season, a card refused, a deposit frozen for weeks, insurance pushed on me. At home in Lithuania I switched to car sharing, and I made this free site so you can check it anywhere in Europe. No ads, no affiliate links.</p>
       <small id="heroFine"></small>
-      <div class="why-act"><a class="btn btn-ink btn-sm" id="mailMe" href="#">Write to me</a><a class="btn btn-line btn-sm" id="donate" href="#" target="_blank" rel="noopener" hidden>Buy me a coffee ☕</a></div></div>
+      <div class="why-act"><a class="btn btn-ink btn-sm" id="mailMe" href="#">Write to me</a><a class="btn btn-line btn-sm" id="donate" href="#" target="_blank" rel="noopener" hidden>Say thanks · tip €2</a></div>
+      <div class="why-soc"><span>Follow the trips</span><nav class="soc" aria-label="Skip the Rental on social media"><a href="https://www.instagram.com/skiptherental/" rel="me noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.6" cy="6.4" r="1.4"/></svg></a><a href="https://www.tiktok.com/@skiptherental" rel="me noopener" target="_blank" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.youtube.com/@SkiptheRental" rel="me noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61595945318708" rel="me noopener" target="_blank" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a><a href="https://www.threads.com/@skiptherental" rel="me noopener" target="_blank" aria-label="Threads" title="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a><a href="https://x.com/skiptherental" rel="me noopener" target="_blank" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></nav></div></div>
   </div>
 </div>
 
@@ -518,9 +546,9 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
   <span>A free hobby project from Lithuania, run through MB „Expat Mates“ (company code 306289251). Prices come from the operators' own price lists. The app always has the final word.</span>
   <span id="footMeta"></span>
   <span id="footMail"></span>
+  <div class="foot-soc"><b class="foot-hd">Follow the trips</b><nav class="soc" aria-label="Skip the Rental on social media"><a href="https://www.instagram.com/skiptherental/" rel="me noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.6" cy="6.4" r="1.4"/></svg></a><a href="https://www.tiktok.com/@skiptherental" rel="me noopener" target="_blank" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.youtube.com/@SkiptheRental" rel="me noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61595945318708" rel="me noopener" target="_blank" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a><a href="https://www.threads.com/@skiptherental" rel="me noopener" target="_blank" aria-label="Threads" title="Threads"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a><a href="https://x.com/skiptherental" rel="me noopener" target="_blank" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></nav></div>
   <nav class="foot-cty" aria-label="Car sharing guides by country"><b class="foot-hd">Car sharing guides</b><a href="austria.html">Austria</a> · <a href="belgium.html">Belgium</a> · <a href="bulgaria.html">Bulgaria</a> · <a href="croatia.html">Croatia</a> · <a href="cyprus.html">Cyprus</a> · <a href="czechia.html">Czechia</a> · <a href="denmark.html">Denmark</a> · <a href="estonia.html">Estonia</a> · <a href="finland.html">Finland</a> · <a href="france.html">France</a> · <a href="germany.html">Germany</a> · <a href="greece.html">Greece</a> · <a href="hungary.html">Hungary</a> · <a href="iceland.html">Iceland</a> · <a href="ireland.html">Ireland</a> · <a href="italy.html">Italy</a> · <a href="latvia.html">Latvia</a> · <a href="liechtenstein.html">Liechtenstein</a> · <a href="lithuania.html">Lithuania</a> · <a href="luxembourg.html">Luxembourg</a> · <a href="moldova.html">Moldova</a> · <a href="netherlands.html">Netherlands</a> · <a href="north-macedonia.html">North Macedonia</a> · <a href="norway.html">Norway</a> · <a href="poland.html">Poland</a> · <a href="portugal.html">Portugal</a> · <a href="serbia.html">Serbia</a> · <a href="slovakia.html">Slovakia</a> · <a href="slovenia.html">Slovenia</a> · <a href="spain.html">Spain</a> · <a href="sweden.html">Sweden</a> · <a href="switzerland.html">Switzerland</a> · <a href="ukraine.html">Ukraine</a> · <a href="united-kingdom.html">United Kingdom</a></nav>
   <nav class="foot-cty" aria-label="Answers"><b class="foot-hd">Answers</b><a href="car-sharing-vs-rental-car.html">Car sharing vs a rental car</a> · <a href="vilnius-bolt-drive-citybee-spark.html">Bolt Drive vs CityBee vs Spark</a> · <a href="vilnius-riga-tallinn-one-way.html">Vilnius → Riga → Tallinn one way</a> · <a href="vilnius-airport-car-sharing.html">Vilnius Airport</a> · <a href="car-sharing-tourists-driving-licence.html">Licence rules for visitors</a> · <a href="rent-a-car-without-credit-card.html">Without a credit card</a></nav>
-  <span><a href="https://www.instagram.com/skiptherental/" rel="me noopener" target="_blank">Instagram</a> · <a href="https://www.tiktok.com/@skiptherental" rel="me noopener" target="_blank">TikTok</a> · <a href="https://www.youtube.com/@SkiptheRental" rel="me noopener" target="_blank">YouTube</a> · <a href="https://www.facebook.com/profile.php?id=61595945318708" rel="me noopener" target="_blank">Facebook</a> · <a href="https://www.threads.com/@skiptherental" rel="me noopener" target="_blank">Threads</a></span>
   <span><a href="about.html">About</a> · <a href="how-we-calculate.html">How we calculate</a> · <a href="privacy.html">Privacy</a> · cookies only if you agree · <a href="#" class="js-consent">Cookie settings</a></span>
 </footer>
 
@@ -530,7 +558,7 @@ footer .foot-cty .foot-hd{display:block; font:700 14px/1.4 var(--ui); margin-bot
   <div class="db" id="drawerBody"></div>
 </aside>
 
-<script src="db.js?v=07250755a5"></script>
+<script src="db.js?v=b4d04608b3"></script>
 <script>
 (function(){
 "use strict";
@@ -1966,6 +1994,40 @@ recompute();
   v.addEventListener("ended", function(){ $("vidAgainTxt").textContent = "Watch again"; again.hidden = false; });
   if(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches){ $("vidAgainTxt").textContent = "Play"; again.hidden = false; }
   else setTimeout(play, 1000);
+})();
+/* ====================================================== "was this useful?" */
+// A card under the answer, never a pop-up. It comes once the visitor has
+// looked at an answer and either stayed three minutes or compared a second
+// trip of their own, and only while the answer is on screen, so nothing above
+// the reader jumps. Then not again for 30 days (a year after a tip). Answers
+// are counted without cookies by GoatCounter, and by Google Analytics only for
+// visitors who said yes to it in the cookie banner.
+(function(){
+  var KEY = "str-thanks", box = $("thanks"), started = Date.now(), inView = false, own = 0, settle = null, shown = false;
+  var later = function(days){ try { localStorage.setItem(KEY, String(Date.now() + days * 864e5)); } catch(e){} };
+  var until = 0; try { until = +localStorage.getItem(KEY) || 0; } catch(e){}
+  if(!DONATE_URL || until > Date.now() || !window.IntersectionObserver) return;
+  var count = function(name){
+    if(window.goatcounter && goatcounter.count) goatcounter.count({ path: name, title: name, event: true });
+    if(window.gtag) gtag("event", name.replace(/-/g, "_"));
+  };
+  var step = function(id){ ["thanksAsk", "thanksYes", "thanksNo", "thanksDone"].forEach(function(x){ $(x).hidden = x !== id; }); };
+  var show = function(){
+    if(shown || !inView || !(own >= 2 || Date.now() - started >= 180000)) return;
+    shown = true; box.hidden = false; later(30); count("useful-shown");
+  };
+  new IntersectionObserver(function(es){ inView = es[0].isIntersecting; show(); }, { threshold: 0.35 }).observe($("answer"));
+  setTimeout(show, 180500); setInterval(show, 15000);
+  // A trip of their own counts once its fields have stayed put for 5 seconds.
+  $("opts").addEventListener("change", function(){ clearTimeout(settle); settle = setTimeout(function(){ own++; show(); }, 5000); });
+  $("thanksTip").href = DONATE_URL;
+  $("thanksMail").href = "mailto:" + CONTACT.join("@") + "?subject=" + encodeURIComponent("What was missing on Skip the Rental");
+  $("usefulYes").addEventListener("click", function(){ count("useful-yes"); step("thanksYes"); });
+  $("usefulNo").addEventListener("click", function(){ count("useful-no"); step("thanksNo"); });
+  $("thanksTip").addEventListener("click", function(){ count("tip-click"); later(365); step("thanksDone"); });
+  var close = function(){ box.hidden = true; };
+  $("thanksLater").addEventListener("click", close);
+  $("thanksX").addEventListener("click", close);
 })();
 $("goBtn").addEventListener("click", function(e){ e.preventDefault(); scrollToEl($("answer-step")); });
 })();
